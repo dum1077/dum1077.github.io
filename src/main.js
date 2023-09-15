@@ -19,18 +19,11 @@ document.addEventListener('scroll', function () {
 
 
 // Arrow up 버튼을 아래로 스크롤시 투명하게 처리함
-const arrowUp = document.querySelector('.arrow-up');
-const arrowUpHeight = arrowUp.offsetHeight;
-
-// if (window.scrollY === 0) {
-//   arrowUp.style.opacity = 0;
-// }
-
+const arrowUp = document.querySelector('.arrow-up')
 document.addEventListener('scroll', () => {
-  //arrowUp.style.opacity = window.scrollY / arrowUpHeight - 2;
-  if (window.scrollY > homeHeight / 2) {
-    arrowUp.style.opacity = 1;
+  if (homeHeight / 2 < window.scrollY ) {
+    arrowUp.classList.add('arrow-up_visible')
   } else {
-    arrowUp.style.opacity = 0;
-  }
-})
+    arrowUp.classList.remove('arrow-up_visible')
+  }}
+)

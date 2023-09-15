@@ -458,6 +458,7 @@ button:focus {
 }
 
 .arrow-up {
+    visibility: hidden;
     background-color: var(--color-primary);
     position: fixed;
     bottom: 3rem;
@@ -469,6 +470,11 @@ button:focus {
     text-align: center;
     box-shadow: 5px 5px 0px 0px var(--color-accent);
     transition: opacity 300ms ease-in;
+}
+
+.arrow-up_visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 @media screen and (max-width: 768px) {
