@@ -310,7 +310,7 @@ button:focus {
     white-space: nowrap;
 }
 
-.category__selected {
+.category--selected {
     background-color: var(--color-accent);
     color: var(--color-primary);
 }
@@ -326,7 +326,7 @@ button:focus {
     border-radius: 100%;
     background-color: var(--color-accent-variant);
     color: var(--color-text);
-    transition: all 300ms ease-in;
+    transition: all 250ms ease-in;
 }
 
 .category--selected .category__count,
