@@ -22,6 +22,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -356,14 +360,35 @@ button:focus {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
+    transition: all 250ms ease-out;
+}
+
+.projects.anim-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(20px);
 }
 
 .project {
     position: relative;
     border-radius: 8px;
-    overflow: hidden;
-
+    /*visibility: hidden; !* 초기 상태에서 숨김 *!*/
+    /*opacity: 0; !* 초기 상태에서 투명도 0 *!*/
+    /*transform: scale(0); !* 초기 상태에서 크기 0 *!*/
 }
+
+
+
+/*.project__front {*/
+/*    display: flex;*/
+/*}*/
+
+/*.project__back {*/
+/*    display: flex;*/
+/*}*/
+
+/*.project__mobile {*/
+/*    display: flex;*/
+/*}*/
 
 .project__img {
     width: 100%;
@@ -510,7 +535,7 @@ button:focus {
         display: none;
         flex-direction: column;
         text-align: center;
-        padding: 1rem 4rem;
+        margin: 1rem 4rem;
         gap: 1rem;
     }
 
