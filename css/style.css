@@ -625,6 +625,11 @@ button:focus {
 
 
 @media screen and (max-width: 768px) {
+    .home__avatar {
+        display: none;
+    }
+
+
    .section {
        padding: 4rem 2rem;
    }
